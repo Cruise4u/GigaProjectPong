@@ -36,17 +36,3 @@ public class CollisionObj : MonoBehaviour
         _rigidBody.linearVelocity = Vector2.zero;
     }
 }
-
-public class LaunchBallComponent : MonoBehaviour
-{
-    public float Speed;
-    public GameObject BallGO;
-
-    public void LaunchBall(Vector2 spawnPoint,Vector2 direction)
-    {
-        Instantiate(BallGO, spawnPoint, Quaternion.identity);
-        BallGO.GetComponent<Rigidbody2D>().linearVelocity = direction * Speed;
-    }
-
-
-}
